@@ -1,0 +1,7 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+172.25.232.90 master1.okd4.example.com master1
+172.25.230.118 master2.okd4.example.com master2
+172.25.232.150 worker.okd4.example.com worker
+172.25.231.60 apt.okd4.example.com api
+172.25.231.254 bootstrap.okd4.example.com bootstrap

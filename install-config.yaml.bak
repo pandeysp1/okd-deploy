@@ -1,0 +1,30 @@
+apiVersion: v1
+baseDomain: example.com
+metadata:
+  name: okd4
+
+compute:
+- hyperthreading: Enabled
+  name: worker
+  replicas: 0
+
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
+
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14 
+    hostPrefix: 23 
+  networkType: OVNKubernetes
+  serviceNetwork: 
+  - 172.30.0.0/16
+
+platform:
+  none: {}
+
+fips: false
+
+pullSecret: '{"auths":{"fake":{"auth":"aWQ6cGFzcwo="}}}' 
+sshKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDb7e21KWtlDaMQ22y4JWGdYCXjMrvH8K442AbHUz0mAe69YzJEZt+W9Xh/Dry8kjMbrrZqKBhggp/wwaB2k+dFUkIe9hUFfJ3UdfJaxMPWaSGhNh/2ofy42M32B7UugDP7y4QUVrPzST7kpNfsGv0h8m/vzBS9wVUbdi0hb4gSku7NCogo486lvXWmGjJpMfubi8O5plXShOrX4fjWWJMSD+OhZyBVpebQ4BfjkgN15w4VYk37XLOhVtuK2/dOkYnaCY2B9y//c4HWvE8YF9aTY0Wkj33DFAHTgSXInViTxUh+H/E1tM2+TTryhiz6hAs29ZOTGNteNdZApx4XUTTot4Ge7OBpQYztGrbbTbzehPS9VqmFrbCDyPvKbFABk8cv8BiGA61sDFoR4jRuiaNDJogb2bBS6pVEjreoZKu1hv5CrPMO99Qw3F/K9a0Z5lMMyps0EwrACOCtwANl3YwoWUaLUyjMbRQ4xKGILIk03p/ep/XOAh224wgKUCTRR3M= root@api.okd4.example.com'   

@@ -1,0 +1,15 @@
+$TTL 86400
+@   IN  SOA master1.example.com. admin.example.com. (
+                2024040101 ; Serial
+                3600       ; Refresh
+                1800       ; Retry
+                604800     ; Expire
+                86400 )    ; Negative Cache TTL
+;
+@   IN  NS  master1.example.com.
+
+90.232  IN PTR  master1.okd4.example.com. 
+118.230 IN PTR  master2.okd4.example.com.
+150.232 IN PTR  worker.okd4.example.com. 
+60.231  IN PTR  api.okd4.example.com. 
+254.231 IN PTR  bootstrap.okd4.example.com.
